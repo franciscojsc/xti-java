@@ -1,0 +1,10 @@
+package com.junio.xti.poo;
+
+public class ContaTest {
+	public static void main(String[] args) {
+		
+		Conta conta = new Conta();
+		conta.cliente = "Francisco";
+		conta.saldo = 10_000.00;
+	}
+}

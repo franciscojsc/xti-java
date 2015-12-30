@@ -1,0 +1,27 @@
+package com.junio.aulaXTI;
+
+import java.util.Random;
+
+public class JogoBaralho {
+
+	public static void main(String[] args) {
+
+		String[] faces = { "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "VALETE", "DAMA", "REI" };
+		String[] nipes = { "ESPADAS", "PAUS", "COPAS", "OUROS" };
+		
+		Random r = new Random();
+		int indiceFaces = r.nextInt(faces.length);
+		String face = faces[indiceFaces];
+		
+		Random n = new Random();
+		int indiceNipes = n.nextInt(nipes.length);
+		String nipe = nipes[indiceNipes];
+		
+		
+		String carta = face+ " " +nipe;
+		System.out.println(carta);
+		
+		
+	}
+
+}

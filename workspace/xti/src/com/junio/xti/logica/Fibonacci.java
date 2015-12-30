@@ -1,0 +1,20 @@
+package com.junio.xti.logica;
+
+public class Fibonacci {
+
+	public static void main(String[] args) {
+
+		int anterior = 0,proximo = 0;
+		
+		while(proximo < 50){
+			System.out.println(proximo);
+			proximo = proximo + anterior;
+			anterior = proximo - anterior;
+
+			if(proximo == 0){
+				proximo++;
+			}
+		}
+	}
+
+} 

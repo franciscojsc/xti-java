@@ -1,0 +1,40 @@
+package com.junio.xti.poo;
+
+public class Matematica {
+
+	/**
+	 * 
+	 * @param um
+	 * @param dois
+	 * @return o maior dos dois numeros
+	 */
+	int maior(int um, int dois) {
+		if (um > dois) {
+			return um;
+		} else {
+			return dois;
+		}
+	}
+
+	double somar(double um, double dois) {
+		double s = um + dois;
+		return s;
+	}
+
+	String pares(int num1, int num2, int num3) {
+		String par = "";
+		int[] vetor = new int[3];
+		vetor[0] = num1;
+		vetor[1] = num2;
+		vetor[2] = num3;
+		for (int i = 0; i < vetor.length; i++) {
+			if (vetor[i] % 2 == 0) {
+				int x = vetor[i];
+				par +=" "+ x+" ";
+				;
+			}
+		}
+		return par;
+	}
+
+}

@@ -1,0 +1,13 @@
+package com.junio.aulaXTI;
+
+public class Fluxo {
+
+	public static void main(String[] args) {
+
+		boolean passou = true;
+		if(passou){
+			System.out.println("Contratado");
+		}
+	}
+
+}

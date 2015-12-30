@@ -1,0 +1,19 @@
+package com.junio.aulaXTI;
+
+import java.util.ArrayList;
+
+public class ListaArray {
+
+	public static void main(String[] args) {
+
+		ArrayList<String> cores = new ArrayList<>();
+		cores.add("Branco");
+		System.out.println(cores.toString());
+		cores.add("Vermelho");
+		System.out.println(cores.toString());
+		cores.add(0,"Azul");
+		System.out.println(cores.toString());
+		
+	}
+
+}

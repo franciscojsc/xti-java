@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="2" key="org.eclipse.egit.ui.internal.clone.GitSelectWizardPageWizardSel"/>
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="git://github.com/Francisco-Junio/xti.git"/>
+		<item value="git://github.com/Francisco-Junio/BSI-SISTEMAS_DE_INFORMACAO.git"/>
+		<item value="git://github.com/Francisco-Junio/aula_de-_java_Loaine.git"/>
+	</list>
+	<section name="GitImportWizard">
+	</section>
+</section>

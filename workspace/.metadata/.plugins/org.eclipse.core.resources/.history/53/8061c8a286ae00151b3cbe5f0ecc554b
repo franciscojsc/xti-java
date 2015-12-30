@@ -1,0 +1,25 @@
+package com.junio.xti.poo;
+
+public class MatematicaTest {
+
+	public static void main(String[] args) {
+
+		Matematica m = new Matematica();
+		int ma = m.maior(10, 200);
+		System.out.println(ma);
+
+		int par = m.maior(2, 4);
+		int impar = m.maior(3, 5);
+
+		double so = m.somar(10, 20);
+		System.out.println(so);
+
+		String p = m.pares(4, 5, 8);
+		System.out.println(" Numeros pares : " + p);
+
+		String i = m.impar(4, 5, 8);
+		System.out.println(" Numeros impares : " + i);
+
+	}
+
+}

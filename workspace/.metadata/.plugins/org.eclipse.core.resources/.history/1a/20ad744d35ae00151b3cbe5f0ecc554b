@@ -1,0 +1,10 @@
+package com.junio.aulaXTI;
+
+public class Fibonacci {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
