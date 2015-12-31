@@ -16,9 +16,12 @@ public class Matematica {
 		}
 	}
 
-	double somar(double um, double dois) {
-		double s = um + dois;
-		return s;
+	double somar(double ... numeros) {
+		double total = 0;
+		for (double n : numeros) {
+			total += n;
+		}
+		return total;
 	}
 
 	String pares(int num1, int num2, int num3) {

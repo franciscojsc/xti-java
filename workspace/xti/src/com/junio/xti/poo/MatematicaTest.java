@@ -11,7 +11,7 @@ public class MatematicaTest {
 		int par = m.maior(2, 4);
 		int impar = m.maior(3, 5);
 
-		double so = m.somar(10, 20);
+		double so = m.somar(10, 20, 147, 222, 444);
 		System.out.println(so);
 
 		String p = m.pares(4, 5, 8);
@@ -19,13 +19,11 @@ public class MatematicaTest {
 
 		String i = m.impar(4, 5, 8);
 		System.out.println(" Numeros impares : " + i);
-		
+
 		int calcularRaiz = m.raiz(27);
 		System.out.println(calcularRaiz);
-		
+
 		System.out.println(Math.sqrt(27));
-		
-		
 
 	}
 
