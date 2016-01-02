@@ -25,6 +25,11 @@ public class MatematicaTest {
 
 		System.out.println(Math.sqrt(27));
 
+		// sobrecarregando metodos
+		System.out.println(m.media(5));
+		System.out.println(m.media(5, 3));
+		System.out.println(m.media(5, 3, 1, 5, 8, 9, 6, 3, 7));
+		System.out.println(m.media("5", "3"));
 	}
 
 }
