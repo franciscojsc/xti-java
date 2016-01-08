@@ -4,11 +4,11 @@ public class AnimalTest {
 
 	public static void main(String[] args) {
 
-		Cachorro toto = new Cachorro();
+		Animal toto = new Cachorro();
 		toto.comida = "Carne";
 		toto.dormir(); 
 
-		Galinha carijo = new Galinha();
+		Animal carijo = new Galinha();
 		carijo.fazerabarulho();
 		carijo.comida = "Milho";
 		carijo.dormir();
@@ -24,6 +24,7 @@ public class AnimalTest {
 		toto.getClass();//o tipo da classe desse objeto
 		toto.toString();//exibir a classe na forma de String(texto)
 		
+	
 		
 	}
 
