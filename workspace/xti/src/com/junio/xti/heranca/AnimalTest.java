@@ -5,18 +5,18 @@ public class AnimalTest {
 	public static void barulho(Animal animal) {
 		animal.fazerBarulho();
 	}
-	
+
 	public static void barulhoSemPolimorfismo(String animal) {
-		if(animal.equals("Cachorro")){
+		if (animal.equals("Cachorro")) {
 			System.out.println("Au, au!");
-		}else if(animal.equals("Galinha")){
+		} else if (animal.equals("Galinha")) {
 			System.out.println("Có, có!");
 		}
 	}
 
 	public static void main(String[] args) {
 
-		Animal generico = new Animal(0, null);
+		// Animal generico = new Animal(0, null);
 		Animal toto = new Cachorro();
 		toto.comida = "Carne";
 		toto.dormir();
@@ -37,14 +37,13 @@ public class AnimalTest {
 		toto.getClass();// o tipo da classe desse objeto
 		toto.toString();// exibir a classe na forma de String(texto)
 
-		generico.fazerBarulho();
+		// generico.fazerBarulho();
 		toto.fazerBarulho();
 		carijo.fazerBarulho();
 
-		
-		barulho(toto);//com polimorfissmo
+		barulho(toto);// com polimorfissmo
 		barulho(carijo);
-		
+
 		barulhoSemPolimorfismo("Cachorro");// barulhoSemPolimorfismo
 		barulhoSemPolimorfismo("Galinha");
 	}
