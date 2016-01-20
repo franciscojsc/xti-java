@@ -20,7 +20,7 @@ public class Animal {
 		System.out.println("Dormiu");
 	}
 
-	void fazerabarulho() {
+	void fazerBarulho() {
 		System.out.println("Fazer Barulho");
 	}
 
