@@ -17,6 +17,7 @@ public class AnimalTest {
 	public static void main(String[] args) {
 
 		// Animal generico = new Animal(0, null);
+		Pitbull pitbull = new Pitbull();
 		Animal toto = new Cachorro();
 		toto.comida = "Carne";
 		toto.dormir();
@@ -46,6 +47,9 @@ public class AnimalTest {
 
 		barulhoSemPolimorfismo("Cachorro");// barulhoSemPolimorfismo
 		barulhoSemPolimorfismo("Galinha");
+		
+		pitbull.fazerBarulho();
+		barulho(pitbull);
 	}
 
 }
