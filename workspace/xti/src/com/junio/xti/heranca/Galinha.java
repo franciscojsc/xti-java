@@ -1,6 +1,6 @@
 package com.junio.xti.heranca;
 
-public class Galinha extends Animal {
+public class Galinha extends Animal implements AreaCalculavel {
 
 	public Galinha() {
 		super(2, "Milho");
@@ -9,6 +9,11 @@ public class Galinha extends Animal {
 	
 	void fazerBarulho(){
 		System.out.println("Có, có!");
+	}
+
+	@Override
+	public double calculaArea() {
+		return 0;
 	}
 
 }
