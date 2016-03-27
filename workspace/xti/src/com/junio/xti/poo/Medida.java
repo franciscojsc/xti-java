@@ -1,7 +1,7 @@
 package com.junio.xti.poo;
 
 public enum Medida {
-	MM("Milímetro"), CM("Centímetro"), M("Metro");
+	MM("Milimetro"), CM("Centimetro"), M("Metro");
 
 	public String titulo;
 

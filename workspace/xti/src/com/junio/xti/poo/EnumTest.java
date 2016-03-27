@@ -13,7 +13,7 @@ public class EnumTest {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(PeçacXadrez.BISPO);
+		System.out.println(PecasXadrez.BISPO);
 		System.out.println(Medida.M.titulo);
 
 		for (Medida m : Medida.values()) {
