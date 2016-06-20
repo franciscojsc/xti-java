@@ -21,12 +21,10 @@ public class DividePorZero {
 
 				continua = true;
 
-			} catch (InputMismatchException e1) {
-				System.err.println("Numeros devem ser inteiro");
+			} catch (ArithmeticException |InputMismatchException e1 ) {
+				System.err.println("Numeros invalido");
 				teclado.nextLine();// descarta a entrada errada e libera novamente para o usuario
 									 
-			} catch (ArithmeticException e2) {
-				System.err.println("Divisor dever ser diferente de Zero");
 			}finally {
 				System.out.println("Finally executado...");//sempre é executado
 			}
