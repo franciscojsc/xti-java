@@ -23,6 +23,9 @@ public class DividePorZero {
 
 			} catch (ArithmeticException |InputMismatchException e1 ) {
 				System.err.println("Numeros invalido");
+				e1.printStackTrace();
+				//System.out.println(e1.getStackTrace());
+				//System.out.println(e1.getMessage());
 				teclado.nextLine();// descarta a entrada errada e libera novamente para o usuario
 									 
 			}finally {
