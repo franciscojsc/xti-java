@@ -1,0 +1,8 @@
+Francisco Junio;12000.25
+Fernanda;18526.5
+Grabiela;7800.33
+Juliana;78965.65
+Nize;100000.0
+Ricardo Lopes;20000.0
+Caio Costa;4575.3
+Veranda;788787.22

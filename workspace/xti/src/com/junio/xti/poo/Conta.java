@@ -17,9 +17,22 @@ public class Conta {
 
 
 
-	void exibirSaldo() {
+	
+	public void exibirSaldo() {
 		System.out.println(cliente + " seu saldo é " + saldo);
 	}
+
+	public String getCliente() {
+		return cliente;
+	}
+
+
+
+	public double getSaldo() {
+		return saldo;
+	}
+
+
 
 	void saca(double valor) {
 		saldo -= valor;
