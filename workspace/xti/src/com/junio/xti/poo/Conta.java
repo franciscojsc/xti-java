@@ -2,8 +2,20 @@ package com.junio.xti.poo;
 
 public class Conta {
 
-	String cliente;
-	double saldo;
+	private String cliente;
+	private double saldo;
+	
+	public Conta() {
+	}
+	
+	
+
+	public Conta(String cliente, double saldo) {
+		this.cliente = cliente;
+		this.saldo = saldo;
+	}
+
+
 
 	void exibirSaldo() {
 		System.out.println(cliente + " seu saldo é " + saldo);
