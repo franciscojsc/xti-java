@@ -1,9 +1,10 @@
 package com.junio.xti.poo;
 
-public class Conta {
+public class Conta implements java.io.Serializable {
 
+	static int x = 0;//não é serializado 
 	private String cliente;
-	private double saldo;
+	transient private double saldo;//não é serializado
 	
 	public Conta() {
 	}
