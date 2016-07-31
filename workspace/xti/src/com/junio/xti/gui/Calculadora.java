@@ -2,6 +2,7 @@ package com.junio.xti.gui;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
+import java.awt.Font;
 import java.awt.GridLayout;
 
 import javax.swing.JButton;
@@ -15,34 +16,37 @@ public class Calculadora extends JFrame {
 		super("Calculadora");
 
 		Container c = getContentPane();
-		Container c2 = new JPanel();
-		c.setLayout(new BorderLayout(15,15));
-		c2.setLayout(new GridLayout(4, 4));
+		Container n = new JPanel();
+		
+		n.setLayout(new GridLayout(4, 4,5,5));
 
-		c.add(BorderLayout.NORTH, new JTextField());
-		c.add(BorderLayout.CENTER, c2);
+		JTextField display = new JTextField();
+		display.setFont(new Font("Serif",Font.PLAIN,26));
+		
+		c.add(BorderLayout.NORTH, display);
+		c.add(BorderLayout.CENTER, n);
 
 		
 
-		c2.add(new JButton("7"));
-		c2.add(new JButton("8"));
-		c2.add(new JButton("9"));
-		c2.add(new JButton("/"));
+		n.add(new JButton("7"));
+		n.add(new JButton("8"));
+		n.add(new JButton("9"));
+		n.add(new JButton("/"));
 
-		c2.add(new JButton("4"));
-		c2.add(new JButton("5"));
-		c2.add(new JButton("6"));
-		c2.add(new JButton("*"));
+		n.add(new JButton("4"));
+		n.add(new JButton("5"));
+		n.add(new JButton("6"));
+		n.add(new JButton("*"));
 
-		c2.add(new JButton("1"));
-		c2.add(new JButton("2"));
-		c2.add(new JButton("3"));
-		c2.add(new JButton("+"));
+		n.add(new JButton("1"));
+		n.add(new JButton("2"));
+		n.add(new JButton("3"));
+		n.add(new JButton("+"));
 
-		c2.add(new JButton("0"));
-		c2.add(new JButton("-"));
-		c2.add(new JButton("."));
-		c2.add(new JButton("+"));
+		n.add(new JButton("0"));
+		n.add(new JButton("."));
+		n.add(new JButton("="));
+		n.add(new JButton("+"));
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(300, 300);
