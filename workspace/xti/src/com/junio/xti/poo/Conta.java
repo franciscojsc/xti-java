@@ -39,7 +39,7 @@ public class Conta implements java.io.Serializable {
 		saldo -= valor;
 	}
 
-	void deposita(double valor) {
+	public void deposita(double valor) {
 		saldo += valor;
 	}
 	
