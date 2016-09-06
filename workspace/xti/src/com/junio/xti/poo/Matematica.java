@@ -8,7 +8,7 @@ public class Matematica {
 	 * @param dois
 	 * @return o maior dos dois numeros
 	 */
-	int maior(int um, int dois) {
+	public int maior(int um, int dois) {
 		if (um > dois) {
 			return um;
 		} else {
@@ -63,7 +63,7 @@ public class Matematica {
 	 * @return
 	 */
 
-	int raiz(int numero) {
+	public int raiz(int numero) {
 		int raiz = 0, impar = 1;
 		while (numero >= impar) {
 			numero -= impar;
