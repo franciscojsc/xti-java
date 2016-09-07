@@ -11,6 +11,33 @@ import com.mysql.jdbc.PreparedStatement;
 
 public class ContaCRUD {
 
+	public void transferir(Connection con,Conta origem, Conta destino, double valor) throws Exception{
+		if(origem.saldo >= valor){
+			
+			try{
+			con.setAutoCommit(false);
+			/* SAQUE*/
+			origem.saldo -= valor;
+			alterar(con, origem);
+			
+			//int x = 1/0;
+			
+			/*DEPÓSITO*/
+			destino.saldo += valor;
+			alterar(con, destino);
+			
+			con.commit();//para confirmar a transação
+			}catch(Exception e){
+				
+				con.rollback();//para desfazer a transação
+				
+			} 
+		}
+		
+	}
+	
+	
+	
 	public void criar(Connection con, Conta conta) throws SQLException {
 		String sql = "insert into conta values(?,?,?)";
 		try (PreparedStatement stm = (PreparedStatement) con.prepareStatement(sql)) {
@@ -22,7 +49,7 @@ public class ContaCRUD {
 
 	}
 	
-	public void alerar(Connection con, Conta conta) throws SQLException {
+	public void alterar(Connection con, Conta conta) throws SQLException {
 		String sql = "update conta set cliente = ?, saldo = ? where numero = ?";
 		try (PreparedStatement stm = (PreparedStatement) con.prepareStatement(sql)) {
 			stm.setString(1, conta.cliente);
@@ -66,27 +93,20 @@ public class ContaCRUD {
 			ContaCRUD crud = new ContaCRUD();
 			
 			
-			Conta conta1 = new Conta(1, "Francisco", 850.36);
-			conta1.saldo = 999.99;
-			conta1.cliente = "Francisco Junio";
-			crud.alerar(con, conta1);
-			
-			Conta conta3 = new Conta(3, "Nize", 910.36);
-			crud.excluir(con, conta3);
-			
-			
-			/*
-			Conta conta2 = new Conta(2, "Alex", 990.36);
-			
-			crud.criar(con, conta1);
-			crud.criar(con, conta2);
-			crud.criar(con, conta3);
-		    */
 			List<Conta> contas = crud.ler(con);
 			for (Conta conta : contas) {
 				System.out.println(conta);
 			}
 		
+			Conta origem = contas.get(0);
+			Conta destino = contas.get(1);
+			
+			crud.transferir(con, origem, destino, 50);
+			
+		    contas = crud.ler(con);
+			for (Conta conta : contas) {
+				System.out.println(conta);
+			}
 		}
 
 	}
